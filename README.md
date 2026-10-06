@@ -1,6 +1,24 @@
-# universal_report_paginator
+# Universal Report Paginator
 
-Generic Odoo 19 QWeb report pagination service.
+A generic Odoo 19 pagination engine for QWeb reports that helps manage variable-height report lines based on dynamic field content.
+
+It estimates row height from text length, field width, font size, and line height, then automatically distributes records across pages. It also supports different content heights for normal and last pages, making it possible to reserve space for signatures, totals, or other final-page content.
+
+### Key Features
+
+* Dynamic pagination based on content length
+* Support for multiple combined dynamic fields
+* Configurable field width and content height
+* Different content height for the last page
+* Estimated text wrapping and row height
+* Per-page subtotal and running total support
+* Relational field paths such as `product_id.display_name`
+* HTML field text estimation
+* Reusable across different Odoo reports and modules
+* No dependency on specific business models
+
+Designed as a lightweight service that can be called from any Odoo report implementation.
+
 
 ## Basic usage
 
